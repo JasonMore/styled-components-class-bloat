@@ -1,9 +1,10 @@
 import React from "react";
-import "./App.css";
-import HelloWorldExtend from "./features/HelloWorldExtend";
-import HelloWorldTemplateString from "./features/HelloWorldTemplateString";
+import HelloWorldExtend from "./extend/HelloWorldExtend";
+import HelloWorldTemplateString from "./templateString/HelloWorldTemplate";
 
-const whichComponent = new URLSearchParams(window.location.search).get("whichComponent");
+const whichComponent = new URLSearchParams(window.location.search).get(
+  "whichComponent"
+);
 
 function App() {
   const showExtend = whichComponent === "extend";
