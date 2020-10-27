@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import HelloWorldExtend from "./features/HelloWorldExtend";
+import HelloWorldTemplateString from "./features/HelloWorldTemplateString";
+
+const whichComponent = new URLSearchParams(window.location.search).get("whichComponent");
 
 function App() {
+  const showExtend = whichComponent === "extend";
+  const showTemplateString = whichComponent === "templateString";
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {showExtend && <HelloWorldExtend />}
+      {showTemplateString && <HelloWorldTemplateString />}
     </div>
   );
 }
