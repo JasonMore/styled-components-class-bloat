@@ -11,7 +11,7 @@ maxRequestedChanges:
   NONE: 0
 
 requiredBaseBranches:
-  - master
+  - main
 
 blockingLabels:
   - [HOLD]
@@ -23,5 +23,3 @@ mergeMethod: squash
 updateBranch: true
 deleteBranchAfterMerge: true
 reportStatus: true
-
-mergeCommitMessage: "{title} (#{number})"
