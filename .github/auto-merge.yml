@@ -1,0 +1,27 @@
+# Configuration for probot-auto-merge - https://github.com/bobvanderlinden/probot-auto-merge
+
+# Require one approval from owner or two approvals from anyone
+minApprovals:
+#  OWNER: 1
+#  MEMBER: 2
+  NONE: 0
+
+# If anyone requests changes, block the merge
+maxRequestedChanges:
+  NONE: 0
+
+requiredBaseBranches:
+  - master
+
+blockingLabels:
+  - [HOLD]
+
+requiredLabels:
+  - [automerge]
+
+mergeMethod: squash
+updateBranch: true
+deleteBranchAfterMerge: true
+reportStatus: true
+
+mergeCommitMessage: "{title} (#{number})"
