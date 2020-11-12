@@ -6,6 +6,7 @@ const whichComponent = new URLSearchParams(window.location.search).get(
   "whichComponent"
 );
 
+// a comment here
 function App() {
   const showExtend = whichComponent === "extend";
   const showTemplateString = whichComponent === "templateString";
